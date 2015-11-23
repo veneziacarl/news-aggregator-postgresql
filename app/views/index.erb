@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Slacker Articles</title>
+    <link rel="stylesheet" href=styles.css>
+  </head>
+
+  <body>
+    <h1>Slacker Articles</h1>
+    <h3>waste your time with us!</h3>
+    <a href="/articles/new">Submit an article here</a>
+    <ul>
+      <% @article_data.each do |article| %>
+        <li><a href="<%= article.url %>" target="_blank"><%= article.title %></a> : <%= article.description %></li>
+      <% end %>
+    </ul>
+  </body>
+
+</html>
